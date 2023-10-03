@@ -29,7 +29,7 @@ export default function Product() {
   const fetchSuppliers = useCallback(async () => {
     try {
       const token = getToken();
-      const response = await axios.get('http://localhost:5000/api/my-supplier', {
+      const response = await axios.get('/my-supplier', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -62,7 +62,7 @@ export default function NotificationsPopover() {
       const token = getToken();
   
       // Actualizar las solicitudes en el backend
-      await axios.put('http://localhost:5000/api/mark-all-as-read', {
+      await axios.put('/mark-all-as-read', {
         requests: requests.map((request) => ({
           ...request,
           viewed: "si",

@@ -33,7 +33,7 @@ export default function DashboardAppPage() {
     try {
       const token = getToken();
 
-      const response = await axios.get('http://localhost:5000/api/get-emissions', {
+      const response = await axios.get('/get-emissions', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

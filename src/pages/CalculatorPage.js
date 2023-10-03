@@ -113,7 +113,7 @@ export default function CalculatorPage() {
       });
 
       const response = await axios.put(
-        'http://localhost:5000/api/update_calculator_factor',
+        '/update_calculator_factor',
         {
           product,
           materialData,

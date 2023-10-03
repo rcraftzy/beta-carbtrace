@@ -183,7 +183,7 @@ export default function DataPage() {
         result
       };
       const response = await axios.post(
-        'http://localhost:5000/api/update-emissions',
+        '/update-emissions',
         data,
         {
           headers: {

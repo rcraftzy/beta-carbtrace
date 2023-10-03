@@ -8,7 +8,7 @@ from flask_mysqldb import MySQL
 
 def create_app():
     app = Flask(__name__, static_url_path='', static_folder='../build')
-    CORS(app, origins=['http://localhost:5000'])
+    CORS(app, origins=['http://localhost:5000', 'https://carbtrace.onrender.com'])
 
     app.secret_key = os.urandom(24)
     app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')  

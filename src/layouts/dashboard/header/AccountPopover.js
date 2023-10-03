@@ -45,7 +45,7 @@ export default function AccountPopover() {
     try {
       const token = getToken();
 
-      const response = await axios.get('http://localhost:5000/api/user', {
+      const response = await axios.get('/user', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
