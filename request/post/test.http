@@ -1,4 +1,6 @@
-POST http://localhost:5000/register
+# POST http://localhost:5000/register
+
+POST https://carbtrace.onrender.com/api/register
 Content-Type: application/json
 
 {
@@ -9,3 +11,5 @@ Content-Type: application/json
 }
 
 GET http://127.0.0.1:5000/notification
+
+GET https://carbtrace.onrender.com/api/notification
