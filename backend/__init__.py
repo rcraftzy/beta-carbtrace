@@ -31,7 +31,7 @@ def create_app():
 
     app.register_blueprint(api.bp)
 
-    CORS(app)
+    CORS(app, origins=['http://localhost:5000'])
     JWTManager(app)
     mail = Mail(app)
     mysql = MySQL(app)
