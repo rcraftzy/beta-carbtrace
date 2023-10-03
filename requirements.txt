@@ -16,7 +16,7 @@ mysqlclient==2.1.0
 packaging==23.2
 protobuf==4.21.12
 PyJWT==2.8.0
-python-dotenv==1.0.0
+python-dotenv==0.21.1
 pytz==2023.3.post1
 six==1.16.0
 Werkzeug==2.1.1
