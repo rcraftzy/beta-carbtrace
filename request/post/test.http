@@ -1,0 +1,11 @@
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "test",
+  "email": "test@mail.com",
+  "password": "1234",
+  "company_name": "Berth"
+}
+
+GET http://127.0.0.1:5000/notification
