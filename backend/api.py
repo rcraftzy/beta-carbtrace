@@ -1,15 +1,12 @@
 from flask import request, jsonify, Blueprint
-from flask_cors import CORS
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 from flask_mysqldb import MySQL
-from . import create_app
 
 load_dotenv()
 
 bp = Blueprint('api', __name__)
-CORS(bp)
 
 mail = Mail()
 mysql = MySQL()

@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, send_from_directory
+from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_mail import Mail
 from flask_mysqldb import MySQL
@@ -30,6 +31,7 @@ def create_app():
 
     app.register_blueprint(api.bp)
 
+    CORS(app)
     JWTManager(app)
     mail = Mail(app)
     mysql = MySQL(app)
