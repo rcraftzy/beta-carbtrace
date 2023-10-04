@@ -70,7 +70,7 @@ export default function MaterialsPage() {
       const token = getToken();
       const factorToSend = selectedFactor;
       const response = await axios.post(
-        '/add-child',
+        '/api/add-child',
         {
           name,
           email,
@@ -91,7 +91,7 @@ export default function MaterialsPage() {
   const fetchSuppliers = useCallback(async () => {
     try {
       const token = getToken();
-      const response = await axios.get('/my-supplier', {
+      const response = await axios.get('/api/my-supplier', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -110,7 +110,7 @@ export default function MaterialsPage() {
     try {
       const token = getToken();
 
-      const response = await axios.get('/my-products', {
+      const response = await axios.get('/api/my-products', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

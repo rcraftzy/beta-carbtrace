@@ -183,7 +183,7 @@ export default function DataPage() {
         result
       };
       const response = await axios.post(
-        '/update-emissions',
+        '/api/update-emissions',
         data,
         {
           headers: {
@@ -202,7 +202,7 @@ export default function DataPage() {
     try {
       const token = getToken(); // Obtiene el token JWT almacenado (puedes implementar la función getToken según tus necesidades)
 
-      const response = await axios.get('http://127.0.0.1:5000/api/table-emissions', {
+      const response = await axios.get('/api/table-emissions', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

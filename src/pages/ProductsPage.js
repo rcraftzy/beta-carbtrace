@@ -59,7 +59,7 @@ export default function Product() {
     try {
       const token = getToken();
 
-      const response = await axios.get('/get-emissions', {
+      const response = await axios.get('/api/get-emissions', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -80,7 +80,7 @@ export default function Product() {
   const fetchProducts = useCallback(async () => {
     try {
       const token = getToken();
-      const response = await axios.get('/my-products', {
+      const response = await axios.get('/api/my-products', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -147,7 +147,7 @@ export default function Product() {
       });
       // Send the materialData array to the backend
       const response = await axios.post(
-        '/newmaterial',
+        '/api/newmaterial',
         {
           name,
           productQuantity,

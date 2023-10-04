@@ -55,7 +55,7 @@ export default function Nav({ openNav, onCloseNav }) {
     try {
       const token = getToken();
 
-      const response = await axios.get('/user', {
+      const response = await axios.get('/api/user', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

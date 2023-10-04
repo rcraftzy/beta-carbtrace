@@ -40,7 +40,7 @@ export default function NotificationsPopover() {
     try {
       const token = getToken();
 
-      const response = await axios.get('http://127.0.0.1:5000/api/notification', {
+      const response = await axios.get('/api/notification', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -62,7 +62,7 @@ export default function NotificationsPopover() {
       const token = getToken();
   
       // Actualizar las solicitudes en el backend
-      await axios.put('/mark-all-as-read', {
+      await axios.put('/api/mark-all-as-read', {
         requests: requests.map((request) => ({
           ...request,
           viewed: "si",

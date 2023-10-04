@@ -71,7 +71,7 @@ function FactorForm() {
     try {
       const token = getToken();
 
-      const response = await axios.get('/get-emissions', {
+      const response = await axios.get('/api/get-emissions', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -92,7 +92,7 @@ function FactorForm() {
     try {
       const token = getToken(); // Obtiene el token JWT almacenado (puedes implementar la función getToken según tus necesidades)
       
-      const response = await axios.get('/my-products', {
+      const response = await axios.get('/api/my-products', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -142,7 +142,7 @@ function FactorForm() {
     try {
       const token = getToken();
 
-      const response = await axios.get('/request', {
+      const response = await axios.get('/api/request', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -208,7 +208,7 @@ function FactorForm() {
       });
 
       const response = await axios.put(
-        '/update_factor',
+        '/api/update_factor',
         {
           product,
           materialData,
@@ -244,7 +244,7 @@ function FactorForm() {
     try {
       const token = getToken();
       const response = await axios.put(
-        '/update_result',
+        '/api/update_result',
         {
           product,
           result,
